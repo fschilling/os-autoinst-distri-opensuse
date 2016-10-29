@@ -839,8 +839,8 @@ sub load_hacluster_tests() {
         loadtest("ha/crm_mon.pm");
         loadtest("ha/fencing.pm");
         if (!get_var("HACLUSTERJOIN")) {                     #node1 will be fenced
-            loadtest "ha/fencing_boot.pm";
-            loadtest "ha/fencing_consoletest_setup.pm";
+            loadtest "installation/first_boot.pm";
+            loadtest "console/consoletest_setup.pm";
         }
     }
     loadtest("ha/check_logs.pm");                            #check_logs must be after ha/fencing.pm
